@@ -1,5 +1,5 @@
 component extends='coldbox.system.Interceptor' {
-    property name='SESOnRequestSettings' inject='coldbox:moduleSettings:SESOnRequest';
+    property name='includeIndex' inject='coldbox:setting:includeIndex@SESOnRequest';
     
     public void function preProcess(event, interceptData) {
         var SESBaseURL = event.isSSL() ? "https://" : "http://";

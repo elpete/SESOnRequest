@@ -12,6 +12,11 @@ component {
 	this.dependencies 		= [];
 
 	function configure() {
+		settings = {
+			// Override in config to be true if not using URL Rewrites
+			includeIndex = false;
+		};
+	
 		interceptors = [
 			{ name='SESOnRequest', class='#moduleMapping#.interceptors.SESOnRequest' }
 		];

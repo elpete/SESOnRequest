@@ -12,11 +12,12 @@ component {
 	function configure() {
 		settings = {
 			// Override in config to be true if not using URL Rewrites
-			includeIndex = false
+            includeIndex = false,
+            forceSSL = false
 		};
-	
+
 		interceptors = [
-			{ 
+			{
 				name = "SESOnRequest",
 				class = "#moduleMapping#.interceptors.SESOnRequest"
 			}

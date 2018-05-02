@@ -1,6 +1,6 @@
 # SESOnRequest
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 <a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/TQMfPZtDP7SHs7UgJVGg61uH/elpete/SESOnRequest'>
   <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/TQMfPZtDP7SHs7UgJVGg61uH/elpete/SESOnRequest.svg' />
@@ -11,7 +11,7 @@
 This package was created to solve the problem of a ColdBox application using the first HTTP_HOST that came its way for all links in the application.  (The specific instance was being pinged by a health check from the base server before requests came in through the DNS.)  It sets both the SESBaseUrl and the HTMLBaseUrl on each request.
 
 ## Installation
-Couldn't be easier.  
+Couldn't be easier.
 ```
 box install ses-on-request
 ```
@@ -25,9 +25,19 @@ The interceptor can be configured to include `index.cfm` in the URL which is req
 
 ```
 moduleSettings = {
-  "SESOnRequest" = {
-    includeIndex = true
-  }
+    "SESOnRequest" = {
+        "includeIndex" = true
+    }
+};
+```
+
+Additionally if you want to force SSL, set the `forceSSL` flag to `true`.
+
+```
+moduleSettings = {
+    "SESOnRequest" = {
+        "forceSSL" = true
+    }
 };
 ```
 
@@ -36,8 +46,9 @@ moduleSettings = {
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars1.githubusercontent.com/u/2583646?v=4" width="100px;"/><br /><sub>Eric Peterson</sub>](https://github.com/elpete)<br />[💻](https://github.com/elpete/SESOnRequest/commits?author=elpete "Code") [📖](https://github.com/elpete/SESOnRequest/commits?author=elpete "Documentation") |
-| :---: |
+<!-- prettier-ignore -->
+| [<img src="https://avatars1.githubusercontent.com/u/2583646?v=4" width="100px;"/><br /><sub><b>Eric Peterson</b></sub>](https://github.com/elpete)<br />[💻](https://github.com/elpete/SESOnRequest/commits?author=elpete "Code") [📖](https://github.com/elpete/SESOnRequest/commits?author=elpete "Documentation") | [<img src="https://avatars0.githubusercontent.com/u/530964?v=4" width="100px;"/><br /><sub><b>George Murphy</b></sub>](http://www.websbygeorge.com)<br />[🤔](#ideas-murpg "Ideas, Planning, & Feedback") |
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

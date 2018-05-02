@@ -2,10 +2,6 @@
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/TQMfPZtDP7SHs7UgJVGg61uH/elpete/SESOnRequest'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/TQMfPZtDP7SHs7UgJVGg61uH/elpete/SESOnRequest.svg' />
-</a>
-
 ### Sets the SES and HTML base url on each request in a ColdBox application
 
 This package was created to solve the problem of a ColdBox application using the first HTTP_HOST that came its way for all links in the application.  (The specific instance was being pinged by a health check from the base server before requests came in through the DNS.)  It sets both the SESBaseUrl and the HTMLBaseUrl on each request.
